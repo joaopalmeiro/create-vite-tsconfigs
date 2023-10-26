@@ -1,0 +1,36 @@
+{
+  "name": "create-vite-tsconfigs",
+  "version": "0.0.0",
+  "description": "TSConfig files for projects created with create-vite.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopalmeiro/create-vite-tsconfigs.git"
+  },
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "ts",
+    "config",
+    "configuration"
+  ],
+  "author": "João Palmeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/create-vite-tsconfigs/issues"
+  },
+  "homepage": "https://github.com/joaopalmeiro/create-vite-tsconfigs#readme",
+  "files": [],
+  "scripts": {
+    "build": "jiti build-tsconfigs.ts",
+    "format": "prettier . --write --log-level debug"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "11.0.3",
+    "@types/node": "18.18.7",
+    "create-vite": "4.4.1",
+    "fs-extra": "11.1.1",
+    "jiti": "1.20.0",
+    "json5": "2.2.3",
+    "prettier": "3.0.3"
+  }
+}
