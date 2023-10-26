@@ -1,11 +1,35 @@
 import { ensureDir } from "fs-extra";
+import { parse, stringify } from "json5";
+import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { promisify } from "node:util";
+import { TsConfigJson } from "type-fest";
 
 interface Config {
   filename: string;
   source: string;
   output: string;
 }
+
+// https://stackoverflow.com/a/40029170
+// https://nodejs.org/api/util.html#utilpromisifycustom
+// https://nodejs.org/api/util.html#custom-promisified-functions
+const promisifyCustom = (
+  text: Parameters<typeof parse>[0],
+  reviver: Parameters<typeof parse>[1],
+) => {
+  return new Promise((resolve, reject) => {
+    try {
+      // console.log(text, reviver);
+      const result = parse(text, reviver);
+      resolve(result);
+    } catch (err) {
+      reject(err);
+    }
+  });
+};
+
+parse[promisify.custom] = promisifyCustom;
 
 // https://www.skovy.dev/blog/typescript-filter-array-with-type-guard
 // https://dmitripavlutin.com/typescript-unknown-vs-any/
@@ -79,7 +103,52 @@ async function main() {
     }
   }
 
-  // TODO
+  // https://nodejs.org/api/util.html#utilpromisifyoriginal
+  // https://blog.logrocket.com/promise-chaining-is-dead-long-live-async-await-445897870abc/
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try_blocks
+  // https://www.npmjs.com/package/no-try
+  // https://github.com/sindresorhus/pify
+  // https://byby.dev/node-promisify
+  // https://github.com/sindresorhus/type-fest/blob/main/source/tsconfig-json.d.ts
+  // https://nodejs.org/api/fs.html#fsreadfilepath-options-callback
+  const readFileResults: PromiseSettledResult<string>[] =
+    await Promise.allSettled(
+      CONFIGS.map((config) => readFile(config.source, { encoding: "utf8" })),
+    );
+  // console.log(readFileResults);
+
+  try {
+    const configContent: string[] = handleResults(readFileResults);
+    // console.log(configContent);
+
+    const parseAsync = promisify(parse);
+    // [...configContent, "{"]
+    const parseResults: PromiseSettledResult<TsConfigJson>[] =
+      await Promise.allSettled(
+        configContent.map((config) => parseAsync(config)),
+      );
+    // console.log(parseResults);
+
+    try {
+      const parsedConfigs: TsConfigJson[] = handleResults(parseResults);
+      // console.log(parsedConfigs);
+      console.log(stringify(parsedConfigs[0]));
+
+      // https://www.typescriptlang.org/tsconfig#extends
+      // https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.app.json
+      // https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.node.json
+      // https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.json
+      // https://github.com/tsconfig/bases/blob/main/bases/node18.json
+    } catch (err) {
+      for (const error of err.errors) {
+        console.log(error);
+      }
+    }
+  } catch (err) {
+    for (const error of err.errors) {
+      console.log(error);
+    }
+  }
 }
 
 // async function mainPromiseAll() {

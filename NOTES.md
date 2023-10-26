@@ -26,7 +26,7 @@ npm init --yes
 ```
 
 ```bash
-npm install -D prettier create-vite jiti json5 fs-extra @types/fs-extra
+npm install -D prettier create-vite jiti json5 fs-extra @types/fs-extra type-fest
 ```
 
 ```bash
