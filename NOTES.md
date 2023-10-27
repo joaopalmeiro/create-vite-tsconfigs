@@ -55,7 +55,7 @@ npm install -D json5 radash type-fest
 ```
 
 ```bash
-npm install -D jsonc-parser
+npm install -D jsonc-parser npm-run-all
 ```
 
 ```bash
