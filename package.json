@@ -1,6 +1,6 @@
 {
   "name": "create-vite-tsconfigs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "TSConfig files for projects created with create-vite.",
   "repository": {
     "type": "git",
