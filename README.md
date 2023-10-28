@@ -2,6 +2,9 @@
 
 TSConfig files for projects created with [create-vite](https://www.npmjs.com/package/create-vite).
 
+- [Source code](https://github.com/joaopalmeiro/create-vite-tsconfigs)
+- [npm package](https://www.npmjs.com/package/create-vite-tsconfigs)
+
 ## Development
 
 ```bash
