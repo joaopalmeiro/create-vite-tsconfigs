@@ -1,6 +1,7 @@
 import type { ModificationOptions } from "jsonc-parser";
 import { resolve } from "node:path";
 import type { Options } from "prettier";
+import type { TsConfigJson } from "type-fest";
 
 interface Config {
   filename: string;
@@ -34,9 +35,14 @@ export const CONFIGS: Config[] = [
   },
 ];
 
-export const PRETTIER_CONFIG_JSONC: Options = {
+export const PRETTIER_CONFIG_MIN_JSONC: Options = {
   parser: "json5",
   trailingComma: "none",
   quoteProps: "preserve",
   singleQuote: false,
 };
+
+// https://github.com/sindresorhus/type-fest/blob/v4.6.0/source/tsconfig-json.d.ts#L1130
+// https://www.typescriptlang.org/docs/handbook/2/keyof-types.html
+// https://www.typescriptlang.org/tsconfig#extends
+export const TOP_LEVEL_REMOVE: (keyof TsConfigJson)[] = ["references"];

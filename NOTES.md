@@ -37,6 +37,7 @@
 - https://github.com/ouuan/tsconfig/commit/770c1c2e057ae69474d02d93d9a14895ee799fcf ("The paths are relative to the tsconfig.json file, making them useless.").
 - [The `compilerOptions.outDir` config is incorrectly resolved when in a shareable config](https://github.com/Microsoft/TypeScript/issues/29172) issue.
 - https://github.com/Microsoft/TypeScript/issues/29172#issuecomment-450966221: "Path-based compiler options (`outDir`, `outFile`, `rootDir`, `include`, `files`) are resolved from the config file they're found in (...)"
+- https://github.com/milesj/packemon
 
 ## Commands
 
@@ -57,11 +58,11 @@ fnm ls-remote
 ```
 
 ```bash
-npm install -D json5 radash type-fest
+npm install -D json5 radash
 ```
 
 ```bash
-npm install -D jsonc-parser npm-run-all
+npm install -D jsonc-parser npm-run-all type-fest
 ```
 
 ```bash

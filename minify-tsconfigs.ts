@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { format } from "prettier";
 
-import { CONFIGS, PRETTIER_CONFIG_JSONC } from "./constants";
+import { CONFIGS, PRETTIER_CONFIG_MIN_JSONC } from "./constants";
 
 function minifyJson(content: string) {
   return JSON.stringify(JSON.parse(content));
@@ -16,7 +16,7 @@ async function main() {
     // https://prettier.io/docs/en/options.html#trailing-commas
     // https://prettier.io/docs/en/options#parser
     // https://prettier.io/docs/en/options#quote-props
-    configContent = await format(configContent, PRETTIER_CONFIG_JSONC);
+    configContent = await format(configContent, PRETTIER_CONFIG_MIN_JSONC);
     // console.log(configContent);
 
     // https://github.com/microsoft/node-jsonc-parser/issues/29
