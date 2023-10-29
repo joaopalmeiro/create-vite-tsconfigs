@@ -12,6 +12,7 @@
 - https://github.com/joaopalmeiro/social-media-icons
 - https://www.typescriptlang.org/tsconfig#extends:
   - "Currently, the only top-level property that is excluded from inheritance is `references`."
+  - "(...) `files`, `include`, and `exclude` from the inheriting config file overwrite those from the base config file (...)"
 - https://github.com/sindresorhus/tsconfig
 - https://www.npmjs.com/package/@sindresorhus/tsconfig?activeTab=code
 - https://github.com/json5/json5
@@ -31,6 +32,11 @@
 - https://radash-docs.vercel.app/docs/object/omit
 - https://github.com/fkei/JSON.minify
 - https://github.com/Josee9988/MinifyAllCli
+- [tsconfig.json: Specify <root> in "include" and "exclude" for extends configs](https://github.com/microsoft/TypeScript/issues/51213) issue.
+- [Add {root} helper for tsconfig.json (for avoiding multiple ../../)](https://github.com/microsoft/TypeScript/issues/37227) issue.
+- https://github.com/ouuan/tsconfig/commit/770c1c2e057ae69474d02d93d9a14895ee799fcf ("The paths are relative to the tsconfig.json file, making them useless.").
+- [The `compilerOptions.outDir` config is incorrectly resolved when in a shareable config](https://github.com/Microsoft/TypeScript/issues/29172) issue.
+- https://github.com/Microsoft/TypeScript/issues/29172#issuecomment-450966221: "Path-based compiler options (`outDir`, `outFile`, `rootDir`, `include`, `files`) are resolved from the config file they're found in (...)"
 
 ## Commands
 
