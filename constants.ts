@@ -45,4 +45,9 @@ export const PRETTIER_CONFIG_MIN_JSONC: Options = {
 // https://github.com/sindresorhus/type-fest/blob/v4.6.0/source/tsconfig-json.d.ts#L1130
 // https://www.typescriptlang.org/docs/handbook/2/keyof-types.html
 // https://www.typescriptlang.org/tsconfig#extends
-export const TOP_LEVEL_REMOVE: (keyof TsConfigJson)[] = ["references"];
+export const TOP_LEVEL_REMOVE: (keyof TsConfigJson)[] = [
+  "references",
+  "files",
+  "include",
+  "exclude",
+];
