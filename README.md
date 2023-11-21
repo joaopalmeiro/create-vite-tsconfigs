@@ -5,6 +5,15 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 - [Source code](https://github.com/joaopalmeiro/create-vite-tsconfigs)
 - [npm package](https://www.npmjs.com/package/create-vite-tsconfigs)
 
+## Available TSConfig files
+
+### [create-vite@4.4.1](https://www.npmjs.com/package/create-vite/v/4.4.1)
+
+| Template                                                                                           | TSConfig file                                                                                                            |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/v4.4.1/packages/create-vite/template-vue-ts) | [tsconfig.json](https://github.com/vitejs/vite/blob/v4.4.1/packages/create-vite/template-vue-ts/tsconfig.json)           |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/v4.4.1/packages/create-vite/template-vue-ts) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/v4.4.1/packages/create-vite/template-vue-ts/tsconfig.node.json) |
+
 ## Development
 
 ```bash
