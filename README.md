@@ -9,10 +9,10 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 
 ### [create-vite@4.4.1](https://www.npmjs.com/package/create-vite/v/4.4.1)
 
-| Template                                                                                           | TSConfig file                                                                                                            |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/v4.4.1/packages/create-vite/template-vue-ts) | [tsconfig.json](https://github.com/vitejs/vite/blob/v4.4.1/packages/create-vite/template-vue-ts/tsconfig.json)           |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/v4.4.1/packages/create-vite/template-vue-ts) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/v4.4.1/packages/create-vite/template-vue-ts/tsconfig.node.json) |
+| Template                                                                                                        | TSConfig file                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%404.4.1/packages/create-vite/template-vue-ts) | [tsconfig.json](https://github.com/vitejs/vite/blob/create-vite%404.4.1/packages/create-vite/template-vue-ts/tsconfig.json)           |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/v4.4.1/packages/create-vite/template-vue-ts)              | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%404.4.1/packages/create-vite/template-vue-ts/tsconfig.node.json) |
 
 ## Development
 
