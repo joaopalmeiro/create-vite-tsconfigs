@@ -1,6 +1,7 @@
 # Notes
 
 - https://github.com/joaopalmeiro/create-vue-tsconfigs
+- https://codeberg.org/joaopalmeiro/misc-tsconfigs
 - https://www.typescriptlang.org/tsconfig ("A TSConfig file (...)")
 - https://github.com/bluwy/create-vite-extra
 - https://github.com/developit/microbundle
@@ -50,15 +51,28 @@
 ## Commands
 
 ```bash
+npm install -D \
+npm-package-json-lint \
+npm-package-json-lint-config-package \
+npm-run-all2 \
+prettier \
+sort-package-json
+```
+
+```bash
+npm install -D "@types/node@$(cat .nvmrc | cut -d . -f 1-2)"
+```
+
+```bash
+rm -rf node_modules/ && npm install
+```
+
+```bash
 npm init --yes
 ```
 
 ```bash
 npm install -D prettier create-vite jiti fs-extra @types/fs-extra
-```
-
-```bash
-npm install -D "@types/node@$(cat .nvmrc | cut -d . -f 1-2)"
 ```
 
 ```bash
@@ -75,10 +89,6 @@ npm install -D json5 radash
 
 ```bash
 npm install -D jsonc-parser npm-run-all type-fest
-```
-
-```bash
-rm -rf node_modules/ && npm install
 ```
 
 ```bash

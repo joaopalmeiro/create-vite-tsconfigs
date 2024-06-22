@@ -29,7 +29,11 @@ npm install
 ```
 
 ```bash
-npm run build
+npm run lint
+```
+
+```bash
+npm run format
 ```
 
 ## Deployment
