@@ -45,6 +45,7 @@
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.app.json
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.node.json
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.json
+- https://github.com/prettier/prettier/blob/main/CHANGELOG.md
 
 ## Commands
 
@@ -343,4 +344,133 @@ jobs:
     "format": "prettier . --write --log-level debug"
   }
 }
+```
+
+```json
+{
+  "name": "create-vite-tsconfigs",
+  "version": "0.2.0",
+  "description": "TSConfig files for projects created with create-vite.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopalmeiro/create-vite-tsconfigs.git"
+  },
+  "keywords": ["tsconfig", "typescript", "ts", "config", "configuration"],
+  "author": "João Palmeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/create-vite-tsconfigs/issues"
+  },
+  "homepage": "https://github.com/joaopalmeiro/create-vite-tsconfigs#readme",
+  "files": ["vue"],
+  "scripts": {
+    "build": "jiti scripts/build-tsconfigs.ts"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "11.0.3",
+    "@types/node": "18.18.7",
+    "create-vite": "4.4.1",
+    "fs-extra": "11.1.1",
+    "jiti": "1.20.0",
+    "jsonc-parser": "3.2.0",
+    "npm-run-all": "4.1.5",
+    "type-fest": "4.6.0"
+  }
+}
+```
+
+### `scripts/build-tsconfigs.ts` file
+
+```ts
+import { ensureDirSync } from "fs-extra";
+import type { EditResult, JSONPath } from "jsonc-parser";
+import { applyEdits, modify, stripComments } from "jsonc-parser";
+import { readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+import {
+  CONFIGS,
+  DEFAULT_MOD_OPTIONS,
+  TOP_LEVEL_REMOVE,
+  VUE_OUTPUT,
+} from "./constants";
+
+function removePath(content: string, path: JSONPath): EditResult {
+  return modify(content, path, undefined, DEFAULT_MOD_OPTIONS);
+}
+
+function main() {
+  ensureDirSync(VUE_OUTPUT);
+
+  for (const config of CONFIGS) {
+    let configContent = readFileSync(config.source, { encoding: "utf8" });
+
+    configContent = stripComments(configContent);
+
+    for (const option of TOP_LEVEL_REMOVE) {
+      const removeOption = removePath(configContent, [option]);
+      configContent = applyEdits(configContent, removeOption);
+    }
+
+    const addComposite = modify(
+      configContent,
+      ["compilerOptions", "composite"],
+      true,
+      DEFAULT_MOD_OPTIONS,
+    );
+    configContent = applyEdits(configContent, addComposite);
+
+    const output = resolve(config.output, config.filename);
+    writeFileSync(output, configContent);
+    console.log(`${output} ✓`);
+  }
+}
+
+main();
+```
+
+### `scripts/constants.ts` file
+
+```ts
+import type { ModificationOptions } from "jsonc-parser";
+import { resolve } from "node:path";
+import type { TsConfigJson } from "type-fest";
+
+interface Config {
+  filename: string;
+  source: string;
+  output: string;
+}
+
+export const DEFAULT_MOD_OPTIONS: ModificationOptions = {
+  isArrayInsertion: false,
+};
+
+export const VUE_OUTPUT: string = resolve(__dirname, "../vue");
+
+export const CONFIGS: Config[] = [
+  {
+    filename: "tsconfig.json",
+    source: resolve(
+      __dirname,
+      "../node_modules/create-vite/template-vue-ts/tsconfig.json",
+    ),
+    output: VUE_OUTPUT,
+  },
+  {
+    filename: "tsconfig.node.json",
+    source: resolve(
+      __dirname,
+      "../node_modules/create-vite/template-vue-ts/tsconfig.node.json",
+    ),
+    output: VUE_OUTPUT,
+  },
+];
+
+export const TOP_LEVEL_REMOVE: (keyof TsConfigJson)[] = [
+  "references",
+  "files",
+  "include",
+  "exclude",
+];
 ```
