@@ -4,6 +4,10 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 
 - [Source code](https://github.com/joaopalmeiro/create-vite-tsconfigs)
 - [npm package](https://www.npmjs.com/package/create-vite-tsconfigs)
+- [Licenses](https://licenses.dev/npm/create-vite-tsconfigs/0.2.0)
+- [Package Phobia](https://packagephobia.com/result?p=create-vite-tsconfigs@0.2.0)
+- [npm trends](https://npmtrends.com/create-vite-tsconfigs)
+- [Snyk Advisor](https://snyk.io/advisor/npm-package/create-vite-tsconfigs)
 
 ## Available TSConfig files
 
@@ -32,24 +36,40 @@ npm run format
 npm run build
 ```
 
+## Deployment
+
 ```bash
 npm pack --dry-run
 ```
 
-## Deployment
-
 ```bash
-npm version --no-git-tag-version patch
+npm version patch
 ```
 
 ```bash
-npm version --no-git-tag-version minor
+npm version minor
 ```
 
 ```bash
-npm version --no-git-tag-version major
+npm version major
+```
+
+- Update the version in the `Licenses` and `Package Phobia` links at the top.
+
+```bash
+echo "v$(npm pkg get version | tr -d \")" | pbcopy
 ```
 
 - Commit and push changes.
 - Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
-- Check [GitHub](https://github.com/joaopalmeiro/create-vite-tsconfigs/actions) and [npm](https://www.npmjs.com/package/create-vite-tsconfigs).
+- Check [GitHub](https://github.com/joaopalmeiro/create-vite-tsconfigs/tags).
+
+```bash
+npm login
+```
+
+```bash
+npm publish
+```
+
+- Check [npm](https://www.npmjs.com/package/create-vite-tsconfigs).
