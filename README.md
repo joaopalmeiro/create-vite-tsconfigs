@@ -58,11 +58,11 @@ cd vue-template && npm install
 ```
 
 ```bash
-npx tsc --project tsconfig.app.json --showConfig
+npx tsc --project tsconfig.app.json --showConfig > ../vue/tsconfig.app.json
 ```
 
 ```bash
-npx tsc --project tsconfig.node.json --showConfig
+npx tsc --project tsconfig.node.json --showConfig > ../vue/tsconfig.node.json
 ```
 
 ```bash
