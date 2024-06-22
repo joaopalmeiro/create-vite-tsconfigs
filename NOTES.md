@@ -2,6 +2,9 @@
 
 - https://github.com/joaopalmeiro/create-vue-tsconfigs
 - https://codeberg.org/joaopalmeiro/misc-tsconfigs
+- Changelogs:
+  - https://github.com/prettier/prettier/blob/main/CHANGELOG.md
+  - https://github.com/vitejs/vite/blob/main/packages/create-vite/CHANGELOG.md
 - https://www.typescriptlang.org/tsconfig ("A TSConfig file (...)")
 - https://github.com/bluwy/create-vite-extra
 - https://github.com/developit/microbundle
@@ -15,6 +18,7 @@
 - https://www.typescriptlang.org/tsconfig#extends:
   - "Currently, the only top-level property that is excluded from inheritance is `references`."
   - "(...) `files`, `include`, and `exclude` from the inheriting config file overwrite those from the base config file (...)"
+  - "All relative paths found in the configuration file will be resolved relative to the configuration file they originated in."
 - https://github.com/sindresorhus/tsconfig
 - https://www.npmjs.com/package/@sindresorhus/tsconfig?activeTab=code
 - https://github.com/json5/json5
@@ -46,7 +50,6 @@
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.app.json
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.node.json
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.json
-- https://github.com/prettier/prettier/blob/main/CHANGELOG.md
 
 ## Commands
 
@@ -65,6 +68,10 @@ npm install -D "@types/node@$(cat .nvmrc | cut -d . -f 1-2)"
 
 ```bash
 rm -rf node_modules/ && npm install
+```
+
+```bash
+npx tsc --project tsconfig.json --showConfig
 ```
 
 ```bash

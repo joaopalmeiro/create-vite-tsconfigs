@@ -11,12 +11,12 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 
 ## Available TSConfig files
 
-### [create-vite@4.4.1](https://www.npmjs.com/package/create-vite/v/4.4.1)
+### [create-vite@5.3.0](https://www.npmjs.com/package/create-vite/v/5.3.0)
 
-| Template                                                                                                        | TSConfig file                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%404.4.1/packages/create-vite/template-vue-ts) | [tsconfig.json](https://github.com/vitejs/vite/blob/create-vite%404.4.1/packages/create-vite/template-vue-ts/tsconfig.json)           |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%404.4.1/packages/create-vite/template-vue-ts) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%404.4.1/packages/create-vite/template-vue-ts/tsconfig.node.json) |
+| Template                                                                                                        | Package TSConfig file                        | Source TSConfig file                                                                                                                  |
+| --------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts) | [tsconfig.app.json](vue/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.app.json)   |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts) | [tsconfig.node.json](vue/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.node.json) |
 
 ## Development
 
@@ -34,6 +34,39 @@ npm run lint
 
 ```bash
 npm run format
+```
+
+Delete the following [top-level options](https://www.typescriptlang.org/tsconfig#extends) (if necessary):
+
+- `"references"`
+- `"files"`
+- `"include"`
+- `"exclude"`
+
+Remove the following [`compilerOptions` options](https://www.typescriptlang.org/tsconfig) (if necessary):
+
+- `"tsBuildInfoFile"`
+
+### template-vue-ts
+
+```bash
+npm create vite@5.3.0 vue-template -- --template vue-ts
+```
+
+```bash
+cd vue-template && npm install
+```
+
+```bash
+npx tsc --project tsconfig.app.json --showConfig
+```
+
+```bash
+npx tsc --project tsconfig.node.json --showConfig
+```
+
+```bash
+cd ..
 ```
 
 ## Deployment
