@@ -39,6 +39,12 @@
 - [The `compilerOptions.outDir` config is incorrectly resolved when in a shareable config](https://github.com/Microsoft/TypeScript/issues/29172) issue.
 - https://github.com/Microsoft/TypeScript/issues/29172#issuecomment-450966221: "Path-based compiler options (`outDir`, `outFile`, `rootDir`, `include`, `files`) are resolved from the config file they're found in (...)"
 - https://github.com/milesj/packemon
+- https://github.com/microsoft/node-jsonc-parser#utilities
+- https://github.com/sindresorhus/type-fest/blob/v4.6.0/source/tsconfig-json.d.ts#L1130
+- https://www.typescriptlang.org/docs/handbook/2/keyof-types.html
+- https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.app.json
+- https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.node.json
+- https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.json
 
 ## Commands
 
@@ -48,6 +54,10 @@ npm init --yes
 
 ```bash
 npm install -D prettier create-vite jiti fs-extra @types/fs-extra
+```
+
+```bash
+npm install -D "@types/node@$(cat .nvmrc | cut -d . -f 1-2)"
 ```
 
 ```bash
@@ -110,6 +120,17 @@ async function main() {
 }
 
 main();
+```
+
+#### `constants.ts` file
+
+```ts
+export const PRETTIER_CONFIG_MIN_JSONC: Options = {
+  parser: "json5",
+  trailingComma: "none",
+  quoteProps: "preserve",
+  singleQuote: false,
+};
 ```
 
 ### `deprecated/build-tsconfigs.ts` file
@@ -312,4 +333,14 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+```
+
+### `package.json` file
+
+```json
+{
+  "scripts": {
+    "format": "prettier . --write --log-level debug"
+  }
+}
 ```

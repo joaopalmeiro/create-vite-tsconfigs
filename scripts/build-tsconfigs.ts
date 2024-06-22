@@ -20,20 +20,14 @@ function main() {
 
   for (const config of CONFIGS) {
     let configContent = readFileSync(config.source, { encoding: "utf8" });
-    // console.log(configContent);
 
     configContent = stripComments(configContent);
-    // console.log(configContent)
 
     for (const option of TOP_LEVEL_REMOVE) {
       const removeOption = removePath(configContent, [option]);
       configContent = applyEdits(configContent, removeOption);
-      // console.log(configContent);
     }
 
-    // https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.app.json
-    // https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.node.json
-    // https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.json
     const addComposite = modify(
       configContent,
       ["compilerOptions", "composite"],
@@ -41,7 +35,6 @@ function main() {
       DEFAULT_MOD_OPTIONS,
     );
     configContent = applyEdits(configContent, addComposite);
-    // console.log(configContent);
 
     const output = resolve(config.output, config.filename);
     writeFileSync(output, configContent);
