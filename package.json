@@ -23,9 +23,7 @@
     "vue"
   ],
   "scripts": {
-    "build:configs": "jiti build-tsconfigs.ts",
-    "build:min": "jiti minify-tsconfigs.ts",
-    "build": "run-s build:configs build:min",
+    "build": "jiti build-tsconfigs.ts",
     "format": "prettier . --write --log-level debug"
   },
   "devDependencies": {
