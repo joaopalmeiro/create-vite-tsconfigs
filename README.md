@@ -29,10 +29,6 @@ npm install
 ```
 
 ```bash
-npm run format
-```
-
-```bash
 npm run build
 ```
 

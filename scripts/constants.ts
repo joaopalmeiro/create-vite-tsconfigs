@@ -12,14 +12,14 @@ export const DEFAULT_MOD_OPTIONS: ModificationOptions = {
   isArrayInsertion: false,
 };
 
-export const VUE_OUTPUT: string = resolve(__dirname, "vue");
+export const VUE_OUTPUT: string = resolve(__dirname, "../vue");
 
 export const CONFIGS: Config[] = [
   {
     filename: "tsconfig.json",
     source: resolve(
       __dirname,
-      "node_modules/create-vite/template-vue-ts/tsconfig.json",
+      "../node_modules/create-vite/template-vue-ts/tsconfig.json",
     ),
     output: VUE_OUTPUT,
   },
@@ -27,7 +27,7 @@ export const CONFIGS: Config[] = [
     filename: "tsconfig.node.json",
     source: resolve(
       __dirname,
-      "node_modules/create-vite/template-vue-ts/tsconfig.node.json",
+      "../node_modules/create-vite/template-vue-ts/tsconfig.node.json",
     ),
     output: VUE_OUTPUT,
   },
