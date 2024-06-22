@@ -17,7 +17,7 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 ## Development
 
 ```bash
-fnm install && fnm use && node --version
+fnm install && fnm use && node --version && npm --version
 ```
 
 ```bash
