@@ -47,10 +47,11 @@
 - https://github.com/microsoft/node-jsonc-parser#utilities
 - https://github.com/sindresorhus/type-fest/blob/v4.6.0/source/tsconfig-json.d.ts#L1130
 - https://www.typescriptlang.org/docs/handbook/2/keyof-types.html
-- https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.app.json
-- https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.node.json
-- https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.json
+- https://github.com/vuejs/create-vue/blob/v3.8.0/template/tsconfig/base/tsconfig.app.json
+- https://github.com/vuejs/create-vue/blob/v3.8.0/template/tsconfig/base/tsconfig.node.json
+- https://github.com/vuejs/create-vue/blob/v3.8.0/template/tsconfig/base/tsconfig.json
 - [fix(create-vite): update tsconfig with moduleDetection force](https://github.com/vitejs/vite/pull/17468/files)
+- https://www.warp.dev/terminus/mkdir-if-not-exists
 
 ## Commands
 
@@ -102,6 +103,10 @@ npm install -D jsonc-parser npm-run-all type-fest
 
 ```bash
 npx minifyall vue/tsconfig.json
+```
+
+```bash
+lychee README.md NOTES.md --verbose
 ```
 
 ## Snippets
