@@ -15,6 +15,8 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 
 | Template                                                                                                            | Package TSConfig file                          | Source TSConfig file                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [template-qwik-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-qwik-ts)   | [tsconfig.app.json](qwik/tsconfig.app.json)    | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-qwik-ts/tsconfig.app.json)    |
+| [template-qwik-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-qwik-ts)   | [tsconfig.node.json](qwik/tsconfig.node.json)  | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-qwik-ts/tsconfig.node.json)  |
 | [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-solid-ts) | [tsconfig.app.json](solid/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-solid-ts/tsconfig.app.json)   |
 | [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-solid-ts) | [tsconfig.node.json](solid/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-solid-ts/tsconfig.node.json) |
 | [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts)     | [tsconfig.app.json](vue/tsconfig.app.json)     | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.app.json)     |
@@ -48,6 +50,28 @@ Delete the following [top-level options](https://www.typescriptlang.org/tsconfig
 Remove the following [`compilerOptions` options](https://www.typescriptlang.org/tsconfig) (if necessary):
 
 - `"tsBuildInfoFile"`
+
+### template-qwik-ts
+
+```bash
+npm create vite@5.3.0 qwik-template -- --template qwik-ts
+```
+
+```bash
+cd qwik-template && npm install
+```
+
+```bash
+npx tsc --project tsconfig.app.json --showConfig > ../qwik/tsconfig.app.json
+```
+
+```bash
+npx tsc --project tsconfig.node.json --showConfig > ../qwik/tsconfig.node.json
+```
+
+```bash
+cd ..
+```
 
 ### template-solid-ts
 

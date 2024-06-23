@@ -1,5 +1,6 @@
 node_modules/
 .DS_Store
 
+qwik-template/
 solid-template/
 vue-template/

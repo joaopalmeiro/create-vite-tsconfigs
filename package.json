@@ -25,11 +25,12 @@
     "url": "https://github.com/joaopalmeiro"
   },
   "files": [
+    "qwik",
     "solid",
     "vue"
   ],
   "scripts": {
-    "clean": "rimraf solid-template vue-template",
+    "clean": "rimraf qwik-template solid-template vue-template",
     "format": "run-s format:pkgJson format:code",
     "format:code": "prettier . --write",
     "format:pkgJson": "sort-package-json",
