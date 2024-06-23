@@ -50,6 +50,7 @@
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.app.json
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.node.json
 - https://github.com/vuejs/create-vue/blob/main/template/tsconfig/base/tsconfig.json
+- [fix(create-vite): update tsconfig with moduleDetection force](https://github.com/vitejs/vite/pull/17468/files)
 
 ## Commands
 
@@ -59,6 +60,7 @@ npm-package-json-lint \
 npm-package-json-lint-config-package \
 npm-run-all2 \
 prettier \
+rimraf \
 sort-package-json
 ```
 

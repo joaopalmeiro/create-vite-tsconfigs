@@ -13,10 +13,12 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 
 ### [create-vite@5.3.0](https://www.npmjs.com/package/create-vite/v/5.3.0)
 
-| Template                                                                                                        | Package TSConfig file                        | Source TSConfig file                                                                                                                  |
-| --------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts) | [tsconfig.app.json](vue/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.app.json)   |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts) | [tsconfig.node.json](vue/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.node.json) |
+| Template                                                                                                            | Package TSConfig file                          | Source TSConfig file                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-solid-ts) | [tsconfig.app.json](solid/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-solid-ts/tsconfig.app.json)   |
+| [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-solid-ts) | [tsconfig.node.json](solid/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-solid-ts/tsconfig.node.json) |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts)     | [tsconfig.app.json](vue/tsconfig.app.json)     | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.app.json)     |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts)     | [tsconfig.node.json](vue/tsconfig.node.json)   | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.node.json)   |
 
 ## Development
 
@@ -46,6 +48,28 @@ Delete the following [top-level options](https://www.typescriptlang.org/tsconfig
 Remove the following [`compilerOptions` options](https://www.typescriptlang.org/tsconfig) (if necessary):
 
 - `"tsBuildInfoFile"`
+
+### template-solid-ts
+
+```bash
+npm create vite@5.3.0 solid-template -- --template solid-ts
+```
+
+```bash
+cd solid-template && npm install
+```
+
+```bash
+npx tsc --project tsconfig.app.json --showConfig > ../solid/tsconfig.app.json
+```
+
+```bash
+npx tsc --project tsconfig.node.json --showConfig > ../solid/tsconfig.node.json
+```
+
+```bash
+cd ..
+```
 
 ### template-vue-ts
 

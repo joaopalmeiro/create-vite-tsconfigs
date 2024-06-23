@@ -25,9 +25,11 @@
     "url": "https://github.com/joaopalmeiro"
   },
   "files": [
+    "solid",
     "vue"
   ],
   "scripts": {
+    "clean": "rimraf solid-template vue-template",
     "format": "run-s format:pkgJson format:code",
     "format:code": "prettier . --write",
     "format:pkgJson": "sort-package-json",
@@ -38,6 +40,7 @@
     "npm-package-json-lint-config-package": "0.1.0",
     "npm-run-all2": "6.2.0",
     "prettier": "3.3.2",
+    "rimraf": "5.0.7",
     "sort-package-json": "2.10.0"
   },
   "engines": {
