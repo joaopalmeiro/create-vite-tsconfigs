@@ -2,5 +2,6 @@ node_modules/
 .DS_Store
 
 qwik-template/
+react-template/
 solid-template/
 vue-template/

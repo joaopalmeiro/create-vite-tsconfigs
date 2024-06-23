@@ -26,11 +26,12 @@
   },
   "files": [
     "qwik",
+    "react",
     "solid",
     "vue"
   ],
   "scripts": {
-    "clean": "rimraf qwik-template solid-template vue-template",
+    "clean": "rimraf qwik-template react-template solid-template vue-template",
     "format": "run-s format:pkgJson format:code",
     "format:code": "prettier . --write",
     "format:pkgJson": "sort-package-json",
