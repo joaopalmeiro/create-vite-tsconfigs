@@ -4,8 +4,8 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 
 - [Source code](https://github.com/joaopalmeiro/create-vite-tsconfigs)
 - [npm package](https://www.npmjs.com/package/create-vite-tsconfigs)
-- [Licenses](https://licenses.dev/npm/create-vite-tsconfigs/0.2.0)
-- [Package Phobia](https://packagephobia.com/result?p=create-vite-tsconfigs@0.2.0)
+- [Licenses](https://licenses.dev/npm/create-vite-tsconfigs/0.3.0)
+- [Package Phobia](https://packagephobia.com/result?p=create-vite-tsconfigs@0.3.0)
 - [npm trends](https://npmtrends.com/create-vite-tsconfigs)
 - [Snyk Advisor](https://snyk.io/advisor/npm-package/create-vite-tsconfigs)
 
