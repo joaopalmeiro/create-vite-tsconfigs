@@ -19,6 +19,7 @@
   - "Currently, the only top-level property that is excluded from inheritance is `references`."
   - "(...) `files`, `include`, and `exclude` from the inheriting config file overwrite those from the base config file (...)"
   - "All relative paths found in the configuration file will be resolved relative to the configuration file they originated in."
+  - "Properties with relative paths found in the configuration file, which aren't excluded from inheritance, will be resolved relative to the configuration file they originated in."
 - https://github.com/sindresorhus/tsconfig
 - https://www.npmjs.com/package/@sindresorhus/tsconfig?activeTab=code
 - https://github.com/json5/json5
