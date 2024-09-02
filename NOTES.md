@@ -499,3 +499,18 @@ export const TOP_LEVEL_REMOVE: (keyof TsConfigJson)[] = [
   "exclude",
 ];
 ```
+
+### `README.md` file
+
+```markdown
+- [Source code](https://github.com/joaopalmeiro/create-vite-tsconfigs)
+- [npm package](https://www.npmjs.com/package/create-vite-tsconfigs)
+- [Licenses](https://licenses.dev/npm/create-vite-tsconfigs/0.3.0)
+- [Package Phobia](https://packagephobia.com/result?p=create-vite-tsconfigs@0.3.0)
+- [npm trends](https://npmtrends.com/create-vite-tsconfigs)
+- [Snyk Advisor](https://snyk.io/advisor/npm-package/create-vite-tsconfigs)
+```
+
+```markdown
+- Update the version in the `Licenses` and `Package Phobia` links at the top.
+```
