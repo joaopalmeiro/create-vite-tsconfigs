@@ -514,3 +514,9 @@ export const TOP_LEVEL_REMOVE: (keyof TsConfigJson)[] = [
 ```markdown
 - Update the version in the `Licenses` and `Package Phobia` links at the top.
 ```
+
+```markdown
+Remove the following [`compilerOptions` options](https://www.typescriptlang.org/tsconfig) (if necessary):
+
+- `"tsBuildInfoFile"`
+```

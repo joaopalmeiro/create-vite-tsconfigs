@@ -11,18 +11,18 @@ TSConfig files for projects created with [create-vite](https://www.npmjs.com/pac
 
 ## Available TSConfig files
 
-### [create-vite@5.3.0](https://www.npmjs.com/package/create-vite/v/5.3.0)
+### [create-vite@5.5.2](https://www.npmjs.com/package/create-vite/v/5.5.2)
 
 | Template                                                                                                            | Package TSConfig file                          | Source TSConfig file                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [template-qwik-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-qwik-ts)   | [tsconfig.app.json](qwik/tsconfig.app.json)    | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-qwik-ts/tsconfig.app.json)    |
-| [template-qwik-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-qwik-ts)   | [tsconfig.node.json](qwik/tsconfig.node.json)  | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-qwik-ts/tsconfig.node.json)  |
-| [template-react-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-react-ts) | [tsconfig.app.json](react/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-react-ts/tsconfig.app.json)   |
-| [template-react-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-react-ts) | [tsconfig.node.json](react/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-react-ts/tsconfig.node.json) |
-| [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-solid-ts) | [tsconfig.app.json](solid/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-solid-ts/tsconfig.app.json)   |
-| [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-solid-ts) | [tsconfig.node.json](solid/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-solid-ts/tsconfig.node.json) |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts)     | [tsconfig.app.json](vue/tsconfig.app.json)     | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.app.json)     |
-| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.3.0/packages/create-vite/template-vue-ts)     | [tsconfig.node.json](vue/tsconfig.node.json)   | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.3.0/packages/create-vite/template-vue-ts/tsconfig.node.json)   |
+| [template-qwik-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-qwik-ts)   | [tsconfig.app.json](qwik/tsconfig.app.json)    | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-qwik-ts/tsconfig.app.json)    |
+| [template-qwik-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-qwik-ts)   | [tsconfig.node.json](qwik/tsconfig.node.json)  | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-qwik-ts/tsconfig.node.json)  |
+| [template-react-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-react-ts) | [tsconfig.app.json](react/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-react-ts/tsconfig.app.json)   |
+| [template-react-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-react-ts) | [tsconfig.node.json](react/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-react-ts/tsconfig.node.json) |
+| [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-solid-ts) | [tsconfig.app.json](solid/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-solid-ts/tsconfig.app.json)   |
+| [template-solid-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-solid-ts) | [tsconfig.node.json](solid/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-solid-ts/tsconfig.node.json) |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-vue-ts)     | [tsconfig.app.json](vue/tsconfig.app.json)     | [tsconfig.app.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-vue-ts/tsconfig.app.json)     |
+| [template-vue-ts](https://github.com/vitejs/vite/tree/create-vite%405.5.2/packages/create-vite/template-vue-ts)     | [tsconfig.node.json](vue/tsconfig.node.json)   | [tsconfig.node.json](https://github.com/vitejs/vite/blob/create-vite%405.5.2/packages/create-vite/template-vue-ts/tsconfig.node.json)   |
 
 ## Development
 
@@ -44,19 +44,15 @@ npm run format
 
 Delete the following [top-level options](https://www.typescriptlang.org/tsconfig#extends) (if necessary):
 
-- `"references"`
 - `"files"`
 - `"include"`
 - `"exclude"`
-
-Remove the following [`compilerOptions` options](https://www.typescriptlang.org/tsconfig) (if necessary):
-
-- `"tsBuildInfoFile"`
+- `"references"`
 
 ### template-qwik-ts
 
 ```bash
-npm create vite@5.3.0 qwik-template -- --template qwik-ts
+npm create vite@5.5.2 qwik-template -- --template qwik-ts
 ```
 
 ```bash
@@ -78,7 +74,7 @@ cd ..
 ### template-react-ts
 
 ```bash
-npm create vite@5.3.0 react-template -- --template react-ts
+npm create vite@5.5.2 react-template -- --template react-ts
 ```
 
 ```bash
@@ -100,7 +96,7 @@ cd ..
 ### template-solid-ts
 
 ```bash
-npm create vite@5.3.0 solid-template -- --template solid-ts
+npm create vite@5.5.2 solid-template -- --template solid-ts
 ```
 
 ```bash
@@ -122,7 +118,7 @@ cd ..
 ### template-vue-ts
 
 ```bash
-npm create vite@5.3.0 vue-template -- --template vue-ts
+npm create vite@5.5.2 vue-template -- --template vue-ts
 ```
 
 ```bash
