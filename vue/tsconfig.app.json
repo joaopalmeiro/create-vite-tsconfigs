@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "composite": true,
     "target": "es2020",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -8,7 +7,6 @@
     "skipLibCheck": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -20,9 +18,8 @@
     "allowSyntheticDefaultImports": true,
     "resolvePackageJsonExports": true,
     "resolvePackageJsonImports": true,
-    "declaration": true,
+    "resolveJsonModule": true,
     "preserveConstEnums": true,
-    "incremental": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
