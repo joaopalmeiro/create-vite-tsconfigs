@@ -110,6 +110,12 @@ npx minifyall vue/tsconfig.json
 lychee README.md NOTES.md --verbose
 ```
 
+### Clean slate
+
+```bash
+rm -rf node_modules/ qwik-template/ react-template/ solid-template/ vue-template/
+```
+
 ## Snippets
 
 ### `minify-tsconfigs.ts` file
