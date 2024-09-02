@@ -1,6 +1,6 @@
 {
   "name": "create-vite-tsconfigs",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": false,
   "description": "TSConfig files for projects created with create-vite.",
   "keywords": [
